@@ -1,9 +1,23 @@
 
 
 let container = document.querySelector(".container");
-let size = 16;
-let dimension = 600/size;
+let button = document.querySelector(".size");
+let x = 0;
+button.addEventListener("click",()=>{
+    let z = prompt("Enter the required size <= 100");
+    x = parseInt(z);
+    if (x>100) {
+        alert("Size should be less than equal to 100");
+        location.reload();
+    }
+    let size = (x>0)?x:16;
+    let dimension = 600/size;
+    draw(size,dimension);
+})
 
+
+function draw(size,dimension){
+container.innerHTML = "";
 for(let i = 0; i < size; i++){
     let bigDabba = document.createElement("div");
     bigDabba.setAttribute("class","bigDabba");
@@ -23,3 +37,5 @@ for(let i = 0; i < size; i++){
     }
     container.appendChild(bigDabba);
 }
+}
+draw();
