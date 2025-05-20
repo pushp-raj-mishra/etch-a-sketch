@@ -8,5 +8,14 @@ body {
 .container {
     height: 600px;
     width: 600px;
-    background-color: rgb(250, 202, 202);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.bigDabba {
+    display: flex;
+    gap: 3px;
+}
+.smallDabba {
+    background-color: greenyellow;
 }
